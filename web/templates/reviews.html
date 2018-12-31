@@ -1,0 +1,12 @@
+{%extends "base.html"%}
+
+
+{%block title%}
+Review Page
+{%endblock%}
+
+{%block content%}
+	You have selected the following product:
+	{{request.form.to_dict()["product"]}}
+
+{%endblock%}
