@@ -6,7 +6,11 @@ Review Page
 {%endblock%}
 
 {%block content%}
-	You have selected the following product:
-	{{request.form.to_dict()["product"]}}
-
+	{% if reviews.reviews %}
+		You have selected the following product:
+		{{request.form.to_dict()["product"]}}
+		{{reviews.reviews}}
+	{% else %}
+		Please put in a valid link.
+	{% endif %}
 {%endblock%}
